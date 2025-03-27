@@ -5,7 +5,7 @@ from chalice import Chalice, Response
 from chalicelib.src.routers.users import UserAPI
 from chalicelib.src.routers.wines import WineAPI
 
-app = Chalice(app_name="wineandnews-api")
+app = Chalice(app_name="wine-api")
 app.api.binary_types = ["application/json", "multipart/form-data"]
 app.api.cors = True
 
