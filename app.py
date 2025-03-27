@@ -2,11 +2,6 @@ import logging
 
 from chalice import Chalice, Response
 
-from chalicelib.src.routers.articles import ArticleAPI
-from chalicelib.src.routers.comments import CommentAPI
-from chalicelib.src.routers.editors import EditorAPI
-from chalicelib.src.routers.modules import ModuleAPI
-from chalicelib.src.routers.subscriptions import SubscriptionAPI
 from chalicelib.src.routers.users import UserAPI
 from chalicelib.src.routers.wines import WineAPI
 
@@ -30,8 +25,3 @@ def index():
 API_PREFIX = "/api/v1.3"
 app.register_blueprint(WineAPI.api, url_prefix=API_PREFIX)
 app.register_blueprint(UserAPI.api, url_prefix=API_PREFIX)
-app.register_blueprint(ModuleAPI.api, url_prefix=API_PREFIX)
-app.register_blueprint(EditorAPI.api, url_prefix=API_PREFIX)
-app.register_blueprint(ArticleAPI.api, url_prefix=API_PREFIX)
-app.register_blueprint(CommentAPI.api, url_prefix=API_PREFIX)
-app.register_blueprint(SubscriptionAPI.api, url_prefix=API_PREFIX)
