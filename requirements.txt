@@ -1,0 +1,12 @@
+boto3
+certifi
+chalice
+dnspython
+pillow
+pyjwt
+pymongo
+pytest
+requests
+zstandard
+dacite
+pydantic
