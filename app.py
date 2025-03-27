@@ -1,3 +1,4 @@
+import os
 import logging
 
 from chalice import Chalice, Response
@@ -16,7 +17,7 @@ logging.basicConfig(level=logging.INFO)
 def index():
     print(app.current_request.to_dict())
     return Response(
-        headers={"location": "https://www.wineandnews.com"},
+        headers={"location": os.getenv("DOMAIN_PROD")},
         body={},
         status_code=301,
     )
